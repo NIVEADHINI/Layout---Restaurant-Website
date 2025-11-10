@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Navigation Menu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
+}
+
+/* Navigation styles */
+.navbar {
+  background-color: #B89C65; /* Rich brown */
+  padding: 1rem 0;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: #7a4e2d; /* Slightly lighter brown */
+  border-radius: 4px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .nav-list {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .nav-link {
+    display: block;
+    width: 100%;
+  }
+}
+/* Footer styles */
+.site-footer {
+  background-color: #B89C65;
+  padding: 2rem;
+  color: white;
+}
+
+.footer-columns {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.footer-col {
+  flex: 1 1 180px;
+}
+
+.footer-col h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  color: white;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-col ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 0.95rem;
+}
+
+.footer-col ul li a:hover {
+  color: #c49b5c;
+}
+
+.footer-bottom {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: white;
+}
+
+.social-icons {
+  margin-top: 0.5rem;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin: 0 0.3rem;
+}
+
+.social-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+}
+/* Footer Copyright */
+.footer-copyright {
+  background-color: black; /* Deep brown or custom background */
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem 2rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+}
+
+.footer-copyright p {
+  margin: 0.4rem 0;
+}
+/* 📱 Responsive Media Query for Footer */
+@media (max-width: 768px) {
+  .footer-columns {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-col {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  .footer-bottom {
+    font-size: 0.85rem;
+  }
+
+  .social-icons a {
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 0.9rem;
+  }
+}
+/* Booking Header */
+.booking-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f5f0e6;
+  padding: 1rem 2rem;
+  flex-wrap: wrap;
+}
+
+.left-block h1 {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.left-block .gold {
+  color: #c49b5c;
+  font-weight: 600;
+}
+
+.left-block .black {
+  color: #333;
+  font-weight: 600;
+}
+
+.tagline {
+  font-size: 0.9rem;
+  color: #999;
+  margin-top: 0.2rem;
+}
+
+.center-block {
+  display: flex;
+  gap: 0.5rem;
+  flex: 1;
+  justify-content: center;
+}
+
+.search-input {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 250px;
+}
+
+.search-btn {
+  background-color: #c49b5c;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.right-block {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.icon {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.profile-pic {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/* 📱 Responsive for Booking Header */
+@media (max-width: 768px) {
+  .booking-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .center-block {
+    justify-content: flex-start;
+  }
+
+  .search-input {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .right-block {
+    justify-content: flex-start;
+  }
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  height: 50vh;
+  background-image: url('hban.png'); /* Replace with your image */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-text {
+  text-align: center;
+  color: #fff;
+  padding: 2rem;
+}
+
+.hero-text h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+/* 📱 Responsive Media Query for Hero */
+@media (max-width: 768px) {
+  .hero-section {
+    height: 60vh;
+  }
+
+  .hero-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+}
+
+/* 🌟 FIX APPLIED HERE for Card Row 🌟 */
+.card-row {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #fff;
+  flex-wrap: nowrap; /* Ensures all cards stay on one line */
+}
+
+.city-card {
+  /* Increased the card width (flex-basis) */
+  flex: 0 0 320px; 
+  background-color: #f5f0e6;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.city-card img {
+  width: 100%;
+  /* Increased the image height */
+  height: 240px; 
+  object-fit: cover;
+}
+.section-title {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #5c3a21;
+  margin-bottom: 1rem;
+}
+/* --- Base Styles --- */
+
+.how-it-works-section {
+    background-color: #f7f3eb; /* Light, beige-like background color */
+    padding: 60px 20px;
+    text-align: center;
+    font-family: sans-serif; /* Use a suitable font */
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.how-it-works-section h2 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 50px;
+    color: #333; /* Darker text for the heading */
+}
+
+.steps-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Arrange items horizontally */
+    justify-content: space-around; /* Space them out */
+    gap: 20px;
+}
+
+.step-item {
+    flex-basis: 22%; /* Give each item an equal width (approx) */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon {
+    font-size: 60px; /* Size of the icon */
+    color: #b08d57; /* Gold/Bronze color for icons (approximation) */
+    line-height: 1;
+    margin-bottom: 15px;
+}
+
+.step-item p {
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* --- Media Query for Responsiveness --- */
+
+/* On screens smaller than 768px (e.g., tablets and phones), stack the steps vertically */
+@media (max-width: 768px) {
+    .steps-list {
+        flex-direction: column; /* Stack steps vertically */
+        gap: 40px; /* Add more vertical space between stacked steps */
+    }
+
+    .step-item {
+        flex-basis: auto; /* Remove fixed width */
+        padding: 0 15%; /* Add side padding to center the content */
+    }
+}
+/* --- Banner Container Styles --- */
+
+.banner-image-container {
+    /* Set the background image and its properties */
+    background-image: url('hban2.png'); /* Replace with the actual image path */
+    background-size: cover; /* Ensures the image covers the entire container */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat;
+    
+    /* Define the height and position context for the title */
+    height: 250px; /* Adjust height as needed */
+    position: relative; /* Essential for centering the absolutely positioned title */
+    display: flex;
+    justify-content: center; /* Horizontally center the title */
+    align-items: center; /* Vertically center the title */
+}
+
+/* --- Banner Title Styles --- */
+
+.banner-title {
+    /* The image has dark/warm tones, so white text provides good contrast */
+    color: white; 
+    font-size: 40px; 
+    font-weight: bold;
+    text-align: center;
+    
+    /* A subtle text shadow helps the text stand out against busy backgrounds */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); 
+    
+    /* Adding padding to create space around the text, similar to the original image */
+    padding: 10px 20px;
+}
+
+/* Optional: To mimic the slight banner look from the image */
+.review-banner-section {
+    width: 100%;
+    overflow: hidden; /* Ensures no content overflows */
+}
+/* --- Base Styles and Container --- */
+
+.review-section {
+    /* Approximate gold/brown background color from the image */
+    background-color: #a48c66; 
+    padding: 80px 20px;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.review-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.review-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Key to horizontal layout */
+    justify-content: space-around;
+    gap: 30px;
+}
+
+/* --- Review Card Styles --- */
+
+.review-card {
+    /* Allows items to take equal space */
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white; /* Text color for contrast */
+}
+
+.reviewer-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures image covers the area without distortion */
+    margin-bottom: 15px;
+}
+
+.reviewer-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.star-rating {
+    /* Styling the stars to appear gold/yellow like in the image */
+    color: #ffd700; /* Gold color */
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.review-text {
+    font-size: 16px;
+    /* Use a color that is visible but slightly subtle */
+    color: #eee; 
+    line-height: 1.4;
+}
+
+
+/* --- Media Query for Responsiveness --- */
+
+/* On screens smaller than 900px, stack the review cards vertically */
+@media (max-width: 900px) {
+    .review-list {
+        flex-direction: column; /* Stack steps vertically */
+        gap: 50px; /* Add vertical spacing between cards */
+    }
+
+    .review-card {
+        max-width: 400px; /* Constrain the width on small screens */
+        margin: 0 auto; /* Center the constrained cards */
+    }
+}
+/* --- Global Styles for this Section --- */
+.contact-subscribe-section {
+    /* Light beige/cream background color (Image 28bc3b.png) */
+    background-color: #f7f3eb; 
+    padding: 60px 20px;
+    font-family: sans-serif;
+}
+
+.content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex; /* Two-column layout */
+    gap: 40px;
+    align-items: center;
+}
+
+/* --- Left Column: Map and Contact Info --- */
+
+.contact-info {
+    flex-basis: 50%;
+    max-width: 50%;
+}
+
+.map-area {
+    height: 250px; 
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.map-placeholder {
+    height: 100%;
+    /* You would use an actual map image or iframe here */
+    background: #f0f0f0 url('map.png') no-repeat center/cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.map-pin {
+    position: absolute;
+    font-size: 24px;
+    color: black;
+    transform: translate(-50%, 0);
+    left: 45%; 
+    top: 50%;
+}
+
+.google-logo {
+    position: absolute;
+    font-weight: bold;
+    font-size: 14px;
+    left: 55%; 
+    top: 55%;
+    color: #4285F4; /* Placeholder color */
+}
+
+.details {
+    text-align: left;
+    color: #333;
+    font-size: 15px;
+}
+
+.detail-item {
+    margin: 8px 0;
+    font-weight: 500;
+}
+
+.detail-item .icon {
+    margin-right: 10px;
+    font-size: 18px;
+    color: #b08d57; /* Gold/Bronze color */
+}
+
+/* --- Right Column: Newsletter Form --- */
+
+.newsletter-form-area {
+    flex-basis: 50%;
+    max-width: 50%;
+    padding-left: 40px;
+}
+
+.newsletter-heading {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.subscribe-form {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-start;
+}
+
+.email-input {
+    flex-grow: 1;
+    max-width: 300px;
+    padding: 18px 25px;
+    border: none;
+    font-size: 16px;
+    /* Light cream background for the input field */
+    background-color: #fcfbf8; 
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.subscribe-button {
+    /* Gold/Brown button color from the image */
+    background-color: #b08d57; 
+    color: white;
+    font-weight: 600;
+    padding: 18px 35px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+
+/* --- Media Query for Responsiveness --- */
+
+@media (max-width: 900px) {
+    .content-wrapper {
+        flex-direction: column; /* Stack columns vertically */
+        gap: 50px;
+    }
+
+    .contact-info, .newsletter-form-area {
+        max-width: 100%; 
+        flex-basis: auto;
+        padding: 0;
+    }
+    
+    .newsletter-heading {
+        text-align: center;
+    }
+
+    .subscribe-form {
+        flex-direction: column; /* Stack input and button */
+        max-width: 350px;
+        margin: 0 auto;
+    }
+    
+    .email-input, .subscribe-button {
+        width: 100%;
+    }
+}
+.city-card {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  flex: 0 0 auto;
+  width: 250px;
+  background-color: #f5f0e6;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.city-card:hover {
+  transform: scale(1.05);
+}
+
+.city-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.city-card h3 {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+  font-family: 'Poppins', sans-serif;
+}
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <nav class="nav-container">
+      <ul class="nav-list">
+        <li><a href="home.html" class="nav-link">Home</a></li>
+        <li><a href="res.html" class="nav-link">Reservation</a></li>
+        <li><a href="blog.html" class="nav-link">Blog</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="cont.html" class="nav-link">Contact Us</a></li>
+        <li><a href="help.html" class="nav-link">Help</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<section class="booking-header">
+  <div class="left-block">
+    <h1><span class="gold">Book</span><span class="black">my table</span></h1>
+    <p class="tagline">Never outstay your meal</p>
+  </div>
+
+  <div class="center-block">
+    <input type="text" placeholder="Search" class="search-input" />
+    <button class="search-btn">Q</button>
+  </div>
+
+  <div class="right-block">
+    <a href=""><img src="bell.jpg" alt="Notifications" class="icon" /></a>
+    <a href="wish.html"><img src="wish.jpg" alt="Favorites" class="icon" /></a>
+    <a href="cont.html"><img src="con.jpg" alt="Profile" class="profile-pic" /></a>
+    <a href="#"><img src="pf.png" alt="Profile" class="profile-pic" /></a>
+  </div>
+</section>
+
+<section class="hero-section">
+  <div class="overlay">
+    <div class="hero-text">
+      <h2>Book Table at your favourite restaurant</h2>
+      <p>and get served instantly</p>
+    </div>
+  </div>
+</section>
+
+<section class="city-row-section">
+  <h2 class="section-title">Explore restaurants in your city</h2>
+ <div class="card-row" id="cardRow">
+  <a href="exp.html" class="city-card">
+    <img src="he1.png" alt="Bangalore" />
+    <h3>Bangalore</h3>
+  </a>
+  <a href="exp.html" class="city-card">
+    <img src="he2.png" alt="Mumbai" />
+    <h3>Mumbai</h3>
+  </a>
+  <a href="exp.html" class="city-card">
+    <img src="he3.png" alt="Chennai" />
+    <h3>Chennai</h3>
+  </a>
+  <a href="exp.html" class="city-card">
+    <img src="he1.png" alt="Hyderabad" />
+    <h3>Hyderabad</h3>
+  </a>
+  <a href="exp.html" class="city-card">
+    <img src="he2.png" alt="Delhi" />
+    <h3>Delhi</h3>
+  </a>
+  <a href="exp.html" class="city-card">
+    <img src="he3.png" alt="Kolkata" />
+    <h3>Kolkata</h3>
+  </a>
+  <a href="exp.html" class="city-card">
+    <img src="he1.png" alt="Pune" />
+    <h3>Pune</h3>
+  </a>
+</div>
+</section>
+
+<section class="how-it-works-section">
+    <div class="container">
+        <h2>How it works</h2>
+        <ul class="steps-list">
+            <li class="step-item">
+                <i class="icon search-icon">🔍</i>
+                <p>Search restaurant</p>
+            </li>
+            <li class="step-item">
+                <i class="icon date-icon">📅</i>
+                <p>Select date/time</p>
+            </li>
+            <li class="step-item">
+                <i class="icon reserve-icon">🪑</i>
+                <p>Reserve your table</p>
+            </li>
+            <li class="step-item">
+                <i class="icon served-icon">🍴</i>
+                <p>Get served instantly</p>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section class="review-banner-section">
+    <div class="banner-image-container">
+        <h2 class="banner-title">Customer Reviews</h2>
+    </div>
+</section>
+
+<section class="review-section">
+    <div class="review-container">
+        <ul class="review-list">
+            <li class="review-card">
+                <img src="cus1.png" alt="Aman p. Avatar" class="reviewer-avatar">
+                <h3 class="reviewer-name">Aman p.</h3>
+                <div class="star-rating">⭐⭐⭐⭐⭐</div>
+                <p class="review-text">Great and excellent service</p>
+            </li>
+
+            <li class="review-card">
+                <img src="cus2.png" alt="David p. Avatar" class="reviewer-avatar">
+                <h3 class="reviewer-name">David p.</h3>
+                <div class="star-rating">⭐⭐⭐⭐⭐</div>
+                <p class="review-text">Great and excellent service</p>
+            </li>
+
+            <li class="review-card">
+                <img src="cus3.png" alt="Gopi p. Avatar" class="reviewer-avatar">
+                <h3 class="reviewer-name">Gopi p.</h3>
+                <div class="star-rating">⭐⭐⭐⭐⭐</div>
+                <p class="review-text">Flexible Service</p>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section class="contact-subscribe-section">
+    <div class="content-wrapper">
+        
+        <div class="contact-info">
+            <div class="map-area">
+                <div class="map-placeholder">
+                    <span class="map-pin">📍</span>
+                    <span class="google-logo">GOOGLE</span>
+                </div>
+            </div>
+            <div class="details">
+                <p class="detail-item">
+                    <span class="icon">📞</span> (123) 8940-985498
+                </p>
+                <p class="detail-item">
+                    <span class="icon">✉️</span> Info@Bookmytable.com
+                </p>
+                <p class="detail-item">
+                    <span class="icon">📍</span> Chennai 54375387
+                </p>
+            </div>
+        </div>
+        
+        <div class="newsletter-form-area">
+            <h3 class="newsletter-heading">Get offers in Your Inbox</h3>
+            <form class="subscribe-form">
+                <input type="email" placeholder="Enter your mail" class="email-input">
+                <button type="submit" class="subscribe-button">Subscribe</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const cardRow = document.getElementById("cardRow");
+    // Ensure the container exists before setting up the scroll
+    if (!cardRow) return; 
+
+    // Add more cards for better scrolling visibility if needed:
+    // This is optional, but ensures the scroll bar appears even on large screens.
+    // document.getElementById("cardRow").innerHTML += 
+    //   '<div class="city-card"><img src="he2.png" /><h3>More City 1</h3></div>' + 
+    //   '<div class="city-card"><img src="he3.png" /><h3>More City 2</h3></div>';
+
+
+    let scrollSpeed = 1;
+    let direction = 1; // 1 for right, -1 for left
+
+    const scrollInterval = setInterval(() => {
+      // Check again if element is still available
+      if (!cardRow) {
+        clearInterval(scrollInterval);
+        return;
+      }
+
+      cardRow.scrollLeft += scrollSpeed * direction;
+
+      const maxScrollLeft = cardRow.scrollWidth - cardRow.clientWidth;
+
+      // Check if we hit the right end (within a small tolerance)
+      if (cardRow.scrollLeft + 1 >= maxScrollLeft) {
+        direction = -1;
+      } 
+      // Check if we hit the left end (within a small tolerance)
+      else if (cardRow.scrollLeft <= 1) {
+        direction = 1;
+      }
+    }, 10); // Smooth motion every 10ms
+  });
+</script>
+
+  </body>
+
+
+  <br>
+    <footer class="site-footer">
+  <div class="footer-columns">
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Customer Reviews</a></li>
+        <li><a href="#">Add Your Restaurant</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Policy Info</h4>
+      <ul>
+        <li><a href="#">Terms & Conditions</a></li>
+        <li><a href="#">Cookies Policy</a></li>
+        <li><a href="#">Cancellation Policy</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Cities</h4>
+      <ul>
+        <li><a href="#">Chennai</a></li>
+        <li><a href="#">Bangalore</a></li>
+        <li><a href="#">Hyderabad</a></li>
+        <li><a href="#">Mumbai</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Help</h4>
+      <ul>
+        <li><a href="#">Booking Status</a></li>
+        <li><a href="#">Add Restaurant</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Restaurant Locations</h4>
+      <ul>
+        <li><a href="#">Restaurant in Chennai</a></li>
+        <li><a href="#">Restaurant in Pune</a></li>
+        <li><a href="#">Restaurant in Bangalore</a></li>
+        <li><a href="#">Restaurant in Kolkata</a></li>
+        <li><a href="#">Restaurant in Hyderabad</a></li>
+        <li><a href="#">Restaurant in Mumbai</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-copyright">
+  <p>© 2025 Book My Table.Co.in. All rights reserved.</p>
+  <p>Phone: (123) 8940-985498 | Email: info@bookmytable.com | Location: Chennai 54375387</p>
+    <div class="social-icons">
+  <a href="#"><img src="face.jpg" alt="Facebook" class="social-icon" /></a>
+  <a href="#"><img src="tw.jpg" alt="Twitter" class="social-icon" /></a>
+  <a href="#"><img src="in.jpg" alt="Instagram" class="social-icon" /></a>
+</div>
+</div>
+</footer>
+</html>

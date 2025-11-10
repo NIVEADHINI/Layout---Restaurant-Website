@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Navigation Menu</title>
+  <!-- Google Fonts: Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- External CSS -->
+  <style>
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
+}
+
+/* Navigation styles */
+.navbar {
+  background-color: #B89C65; /* Rich brown */
+  padding: 1rem 0;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: #7a4e2d; /* Slightly lighter brown */
+  border-radius: 4px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .nav-list {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .nav-link {
+    display: block;
+    width: 100%;
+  }
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+.site-footer {
+  background-color: #B89C65;
+  padding: 2rem;
+  color: white;
+}
+
+.footer-columns {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.footer-col {
+  flex: 1 1 180px;
+}
+
+.footer-col h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  color: white;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-col ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 0.95rem;
+}
+
+.footer-col ul li a:hover {
+  color: #c49b5c;
+}
+
+.footer-bottom {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: white;
+}
+
+.social-icons {
+  margin-top: 0.5rem;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin: 0 0.3rem;
+}
+
+.social-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+.footer-copyright {
+  background-color: black; /* Deep brown or custom background */
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem 2rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+}
+
+.footer-copyright p {
+  margin: 0.4rem 0;
+}
+/* 📱 Responsive Media Query */
+@media (max-width: 768px) {
+  .footer-columns {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-col {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  .footer-bottom {
+    font-size: 0.85rem;
+  }
+
+  .social-icons a {
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 0.9rem;
+  }
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fdfdfd;
+}
+
+.booking-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f5f0e6;
+  padding: 1rem 2rem;
+  flex-wrap: wrap;
+}
+
+.left-block h1 {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.left-block .gold {
+  color: #c49b5c;
+  font-weight: 600;
+}
+
+.left-block .black {
+  color: #333;
+  font-weight: 600;
+}
+
+.tagline {
+  font-size: 0.9rem;
+  color: #999;
+  margin-top: 0.2rem;
+}
+
+.center-block {
+  display: flex;
+  gap: 0.5rem;
+  flex: 1;
+  justify-content: center;
+}
+
+.search-input {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 250px;
+}
+
+.search-btn {
+  background-color: #c49b5c;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.right-block {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.icon {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.profile-pic {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .booking-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .center-block {
+    justify-content: flex-start;
+  }
+
+  .search-input {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .right-block {
+    justify-content: flex-start;
+  }
+}
+/* --- Detailed Footer Styles (image_2a2060.png) --- */
+
+.detailed-footer {
+    /* Background matching the image */
+    background-color: #f7f3eb; 
+    padding: 50px 20px;
+    font-family: sans-serif;
+    color: #333;
+    border-top: 1px solid #ddd;
+}
+
+.footer-grid {
+    display: grid;
+    /* Define 3 equal columns */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 40px;
+    text-align: left;
+}
+
+.footer-col {
+    padding: 0 10px;
+}
+
+.footer-logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.logo-tagline {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.col-heading {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.footer-col p, .footer-col address {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 5px;
+    font-style: normal;
+}
+
+/* Specific style for contact items */
+.phone-number, .whatsapp-contact {
+    font-weight: 600;
+}
+
+.whatsapp-contact .whatsapp-icon {
+    font-size: 1.1em;
+    color: #25d366; /* WhatsApp Green */
+    margin-right: 5px;
+}
+
+.email-heading, .col-heading[class*="phone"] {
+    /* Styling for the icons next to headings */
+    font-style: normal;
+    font-size: 18px;
+    color: #b08d57; /* Gold/Bronze accent */
+}
+
+/* --- Responsive Layout for Footer --- */
+
+@media (max-width: 900px) {
+    .footer-grid {
+        grid-template-columns: 1fr; /* Stack columns vertically */
+        text-align: left;
+        gap: 30px;
+    }
+}
+/* --- Need Help Section Styles (image_2a203f.jpg) --- */
+
+.need-help-section {
+    /* Background matching the top half of the image */
+    background-color: #f7f3eb; 
+    padding: 60px 20px 0 20px; /* Padding bottom is reduced as the image is right at the edge */
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.help-heading {
+    font-size: 30px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.help-text {
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #4b443c; 
+}
+
+.help-image-box {
+    width: 100%;
+    overflow: hidden; /* Ensures image stays within container */
+}
+
+.help-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    /* Negative margin to pull the image up to the edge of the section background */
+    margin-bottom: -5px; 
+}
+/* --- Detailed Footer Styles (image_2a2060.png) --- */
+
+.detailed-footer {
+    /* Background matching the image */
+    background-color: #f7f3eb; 
+    padding: 50px 20px;
+    font-family: sans-serif;
+    color: #333;
+}
+
+.footer-grid {
+    display: grid;
+    /* Define 3 equal columns */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 40px;
+    text-align: left;
+}
+
+.footer-col {
+    padding: 0 10px;
+}
+
+.footer-logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.logo-tagline {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.col-heading {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.footer-col p, .footer-col address {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 5px;
+    font-style: normal;
+    color: black;
+}
+
+/* Specific style for contact items */
+.phone-number, .whatsapp-contact {
+    font-weight: 600;
+}
+
+.whatsapp-contact .whatsapp-icon {
+    font-size: 1.1em;
+    color: #25d366; /* WhatsApp Green */
+    margin-right: 5px;
+}
+
+.email-heading, .col-heading[class*="phone"] {
+    /* Styling for the icons next to headings */
+    font-style: normal;
+    font-size: 18px;
+    color: black; /* Gold/Bronze accent */
+}
+
+/* --- Responsive Layout for Footer --- */
+
+@media (max-width: 900px) {
+    .footer-grid {
+        grid-template-columns: 1fr; /* Stack columns vertically */
+        text-align: left;
+        gap: 30px;
+    }
+}
+ </style>
+</head>
+<body>
+  <header class="navbar">
+    <nav class="nav-container">
+      <ul class="nav-list">
+        <li><a href="home.html" class="nav-link">Home</a></li>
+        <li><a href="res.html" class="nav-link">Reservation</a></li>
+        <li><a href="blog.html" class="nav-link">Blog</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="cont.html" class="nav-link">Contact Us</a></li>
+        <li><a href="help.html" class="nav-link">Help</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<section class="booking-header">
+  <div class="left-block">
+    <h1><span class="gold">Book</span><span class="black">my table</span></h1>
+    <p class="tagline">Never outstay your meal</p>
+  </div>
+
+  <div class="center-block">
+    <input type="text" placeholder="Search" class="search-input" />
+    <button class="search-btn">Q</button>
+  </div>
+
+  <div class="right-block">
+    <a href="#"><img src="bell.jpg" alt="Notifications" class="icon" /></a>
+    <a href="#"><img src="wish.jpg" alt="Favorites" class="icon" /></a>
+    <a href="#"><img src="con.jpg" alt="Profile" class="profile-pic" /></a>
+    <a href="#"><img src="pf.png" alt="Profile" class="profile-pic" /></a>
+  </div>
+</section>
+
+<section class="need-help-section">
+    <div class="container">
+        <h2 class="help-heading">Need Help</h2>
+        <p class="help-text">
+            We're here to help you with bookings, information, payments, or anything related to your 
+            Table Reservation experience. Reach out to us via phone, email, or chat — our support team is 
+            ready to assist you and make your food smooth and enjoyable.
+        </p>
+        
+        <div class="help-image-box">
+            <img src="hlban.png" alt="Customer support representatives wearing headsets" class="help-image">
+        </div>
+    </div>
+</section>
+
+<footer class="detailed-footer">
+    <div class="container footer-grid">
+        
+        <div class="footer-col logo-col">
+            <h3 class="footer-logo">Bookmytable</h3>
+            <p class="logo-tagline">Never wait for your meal</p>
+            <h4 class="col-heading">Head Office</h4>
+            <address>
+                Bookmytable<br>
+                123 Green Wheels Avenue<br>
+                EcoCity, New Delhi – 110001, India
+            </address>
+        </div>
+
+        <div class="footer-col">
+            <h4 class="col-heading email-heading">✉️ Branch Email Id</h4>
+            <p>Email: support@bookmytable.com</p>
+            <p>Email: support@bookmytable.com</p>
+            <p>Email: support@bookmytable.com</p>
+            
+            <h4 class="col-heading manager-heading">Branch Manager</h4>
+            <p class="whatsapp-contact">
+                <span class="whatsapp-icon">💬</span> WhatsApp: +91 98765 43210
+            </p>
+        </div>
+
+        <div class="footer-col">
+            <h4 class="col-heading">📞 Branch Supervisor</h4>
+            <p>ContactNumber</p>
+            <p class="phone-number">+919876543210</p>
+            
+            <h4 class="col-heading">📞 Branch Director</h4>
+            <p>ContactNumber</p>
+            <p class="phone-number">+918934374394</p>
+        </div>
+    </div>
+</footer>
+
+
+  </body>
+  <br>
+    <footer class="site-footer">
+  <div class="footer-columns">
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Customer Reviews</a></li>
+        <li><a href="#">Add Your Restaurant</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Policy Info</h4>
+      <ul>
+        <li><a href="#">Terms & Conditions</a></li>
+        <li><a href="#">Cookies Policy</a></li>
+        <li><a href="#">Cancellation Policy</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Cities</h4>
+      <ul>
+        <li><a href="#">Chennai</a></li>
+        <li><a href="#">Bangalore</a></li>
+        <li><a href="#">Hyderabad</a></li>
+        <li><a href="#">Mumbai</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Help</h4>
+      <ul>
+        <li><a href="#">Booking Status</a></li>
+        <li><a href="#">Add Restaurant</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Restaurant Locations</h4>
+      <ul>
+        <li><a href="#">Restaurant in Chennai</a></li>
+        <li><a href="#">Restaurant in Pune</a></li>
+        <li><a href="#">Restaurant in Bangalore</a></li>
+        <li><a href="#">Restaurant in Kolkata</a></li>
+        <li><a href="#">Restaurant in Hyderabad</a></li>
+        <li><a href="#">Restaurant in Mumbai</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-copyright">
+  <p>© 2025 Book My Table.Co.in. All rights reserved.</p>
+  <p>Phone: (123) 8940-985498 | Email: info@bookmytable.com | Location: Chennai 54375387</p>
+    <div class="social-icons">
+  <a href="#"><img src="face.jpg" alt="Facebook" class="social-icon" /></a>
+  <a href="#"><img src="tw.jpg" alt="Twitter" class="social-icon" /></a>
+  <a href="#"><img src="in.jpg" alt="Instagram" class="social-icon" /></a>
+</div>
+</div>
+</footer>
+</html>
