@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Navigation Menu</title>
+  <!-- Google Fonts: Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- External CSS -->
+  <style>
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
+}
+
+/* Navigation styles */
+.navbar {
+  background-color: #B89C65; /* Rich brown */
+  padding: 1rem 0;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: #7a4e2d; /* Slightly lighter brown */
+  border-radius: 4px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .nav-list {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .nav-link {
+    display: block;
+    width: 100%;
+  }
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+.site-footer {
+  background-color: #B89C65;
+  padding: 2rem;
+  color: white;
+}
+
+.footer-columns {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.footer-col {
+  flex: 1 1 180px;
+}
+
+.footer-col h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  color: white;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-col ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 0.95rem;
+}
+
+.footer-col ul li a:hover {
+  color: #c49b5c;
+}
+
+.footer-bottom {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: white;
+}
+
+.social-icons {
+  margin-top: 0.5rem;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin: 0 0.3rem;
+}
+
+.social-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+.footer-copyright {
+  background-color: black; /* Deep brown or custom background */
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem 2rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+}
+
+.footer-copyright p {
+  margin: 0.4rem 0;
+}
+/* 📱 Responsive Media Query */
+@media (max-width: 768px) {
+  .footer-columns {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-col {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  .footer-bottom {
+    font-size: 0.85rem;
+  }
+
+  .social-icons a {
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 0.9rem;
+  }
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fdfdfd;
+}
+
+.booking-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f5f0e6;
+  padding: 1rem 2rem;
+  flex-wrap: wrap;
+}
+
+.left-block h1 {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.left-block .gold {
+  color: #c49b5c;
+  font-weight: 600;
+}
+
+.left-block .black {
+  color: #333;
+  font-weight: 600;
+}
+
+.tagline {
+  font-size: 0.9rem;
+  color: #999;
+  margin-top: 0.2rem;
+}
+
+.center-block {
+  display: flex;
+  gap: 0.5rem;
+  flex: 1;
+  justify-content: center;
+}
+
+.search-input {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 250px;
+}
+
+.search-btn {
+  background-color: #c49b5c;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.right-block {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.icon {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.profile-pic {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .booking-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .center-block {
+    justify-content: flex-start;
+  }
+
+  .search-input {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .right-block {
+    justify-content: flex-start;
+  }
+}
+/*
+ * Base Styling (Applies to All Screen Sizes)
+ */
+.banner-section {
+    /* Set the background image */
+    background-image: url('eban.png');
+    /* Ensure the image covers the entire element */
+    background-size: cover;
+    /* Center the image within the element */
+    background-position: center center;
+    /* Prevent the background image from repeating */
+    background-repeat: no-repeat;
+    /* Minimum height for the banner (desktop/larger screens) */
+    min-height: 400px; 
+    /* Add padding for spacing */
+    padding: 20px 0;
+    /* Optional: Center content if you add text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Optional: Use a fixed height if 'min-height' isn't suitable */
+    /* height: 400px; */
+}
+
+/*
+ * Content Styling (Optional, for when you add text)
+ */
+.banner-content {
+    /* Set a max width for content to prevent stretching */
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    /* Optional: Style for text color/shadow on the image */
+    /* color: white; */
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); */
+}
+
+/*
+ * Media Query for Responsiveness (Mobile/Smaller Screens)
+ */
+@media (max-width: 768px) {
+    .banner-section {
+        /* Reduce the height for smaller screens to save vertical space */
+        min-height: 250px; 
+        /* Adjust padding if necessary */
+        padding: 15px 0;
+    }
+}
+/* --- Base Section Styling --- */
+.restaurant-collections {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: sans-serif;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* --- Card Grid Layout (The core of the 4x3 structure) --- */
+.card-grid {
+    display: grid;
+    /* Default layout for larger screens: 3 equal columns */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; /* Space between cards */
+}
+
+/* --- Individual Card Styling --- */
+.collection-card {
+    display: block; /* Makes the whole card clickable */
+    text-decoration: none; /* Removes underline from link */
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden; /* Ensures image corners are rounded */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.collection-card:hover {
+    transform: translateY(-5px); /* Lift card slightly on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card-image-wrapper {
+    width: 100%;
+    /* Use padding-top for a fixed aspect ratio (like 16:9 or 3:2) */
+    /* Based on the image's appearance, a 3:2 aspect ratio looks close */
+    padding-top: 66.66%; /* (2 / 3) * 100% = 66.66% for 3:2 aspect ratio */
+    position: relative;
+}
+
+.card-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the area without stretching */
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    padding: 10px 15px 5px;
+    margin: 0;
+}
+
+.card-count {
+    font-size: 14px;
+    color: #777;
+    padding: 0 15px 15px;
+    margin: 0;
+}
+
+/* --- Media Query for Mobile Responsiveness --- */
+@media (max-width: 900px) {
+    /* Tablet/Mid-Sized Screens: Switch to 2 columns */
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+}
+
+@media (max-width: 550px) {
+    /* Mobile Screens: Switch to 1 column */
+    .section-title {
+        font-size: 24px;
+    }
+    .card-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+}
+ </style>
+</head>
+<body>
+  <header class="navbar">
+    <nav class="nav-container">
+      <ul class="nav-list">
+        <li><a href="home.html" class="nav-link">Home</a></li>
+        <li><a href="res.html" class="nav-link">Reservation</a></li>
+        <li><a href="blog.html" class="nav-link">Blog</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="cont.html" class="nav-link">Contact Us</a></li>
+        <li><a href="help.html" class="nav-link">Help</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<section class="booking-header">
+  <div class="left-block">
+    <h1><span class="gold">Book</span><span class="black">my table</span></h1>
+    <p class="tagline">Never outstay your meal</p>
+  </div>
+
+  <div class="center-block">
+    <input type="text" placeholder="Search" class="search-input" />
+    <button class="search-btn">Q</button>
+  </div>
+
+  <div class="right-block">
+    <a href="#"><img src="bell.jpg" alt="Notifications" class="icon" /></a>
+    <a href="wish.html"><img src="wish.jpg" alt="Favorites" class="icon" /></a>
+    <a href="cont.html"><img src="con.jpg" alt="Profile" class="profile-pic" /></a>
+    <a href="#"><img src="pf.png" alt="Profile" class="profile-pic" /></a>
+  </div>
+</section>
+
+<section class="banner-section">
+    <div class="banner-content">
+        </div>
+</section>
+
+<section class="restaurant-collections">
+    <h2 class="section-title">Explore restaurants by famous collections in chennai</h2>
+    
+    <div class="card-grid">
+        <a href="res.html" class="collection-card">
+            <div class="card-image-wrapper">
+                <img src="ep1.png" alt="Perfect Buffet collection" class="card-image">
+            </div>
+            <h3 class="card-title">Perfect-Buffet</h3>
+            <p class="card-count">7 Restaurant found</p>
+        </a>
+
+        <a href="res.html" class="collection-card">
+            <div class="card-image-wrapper">
+                <img src="ep2.png" alt="Barbeque collection" class="card-image">
+            </div>
+            <h3 class="card-title">Barbeque</h3>
+            <p class="card-count">6 Restaurant found</p>
+        </a>
+
+        <a href="res.html" class="collection-card">
+            <div class="card-image-wrapper">
+                <img src="ep3.png" alt="Chinese collection" class="card-image">
+            </div>
+            <h3 class="card-title">Chinese</h3>
+            <p class="card-count">5 Restaurant found</p>
+        </a>
+
+        <a href="res.html" class="collection-card placeholder-card">
+            <div class="card-image-wrapper">
+                <img src="ep4.png" alt="Placeholder" class="card-image"></div>
+            <h3 class="card-title">Italian</h3>
+            <p class="card-count">12 Restaurant found</p>
+        </a>
+        <a href="res.html" class="collection-card placeholder-card">
+            <div class="card-image-wrapper">
+                <img src="ep5.png" alt="Placeholder" class="card-image"></div>
+            <h3 class="card-title">Seafood</h3>
+            <p class="card-count">9 Restaurant found</p>
+        </a>
+        <a href="res.html" class="collection-card placeholder-card">
+            <div class="card-image-wrapper">
+                <img src="ep6.png" alt="Placeholder" class="card-image"></div>
+            <h3 class="card-title">Breakfast Spots</h3>
+            <p class="card-count">15 Restaurant found</p>
+        </a>
+
+        <a href="res.html" class="collection-card placeholder-card">
+            <div class="card-image-wrapper">
+                <img src="ep1.png" alt="Placeholder" class="card-image"></div>
+            <h3 class="card-title">Fine Dining</h3>
+            <p class="card-count">4 Restaurant found</p>
+        </a>
+        <a href="res.html" class="collection-card placeholder-card">
+            <div class="card-image-wrapper">
+                <img src="ep2.png" alt="Placeholder" class="card-image"></div>
+            <h3 class="card-title">Vegan</h3>
+            <p class="card-count">6 Restaurant found</p>
+        </a>
+        <a href="res.html" class="collection-card placeholder-card">
+            <div class="card-image-wrapper">
+                <img src="ep3.png" alt="Placeholder" class="card-image"></div>
+            <h3 class="card-title">Pubs & Bars</h3>
+            <p class="card-count">20 Restaurant found</p>
+        </a>
+
+        <a href="res.html" class="collection-card placeholder-card">
+            <div class="card-image-wrapper">
+                <img src="ep4.png" alt="Placeholder" class="card-image"></div>
+            <h3 class="card-title">Desserts</h3>
+            <p class="card-count">18 Restaurant found</p>
+        </a>
+        <a href="res.html" class="collection-card placeholder-card">
+            <div class="card-image-wrapper">
+                <img src="ep5.png" alt="Placeholder" class="card-image"></div>
+            <h3 class="card-title">Rooftop</h3>
+            <p class="card-count">3 Restaurant found</p>
+        </a>
+        <a href="res.html" class="collection-card placeholder-card">
+            <div class="card-image-wrapper">
+                <img src="ep6.png" alt="Placeholder" class="card-image"></div>
+            <h3 class="card-title">Quick Bites</h3>
+            <p class="card-count">35 Restaurant found</p>
+        </a>
+    </div>
+</section>
+
+  </body>
+  <br>
+    <footer class="site-footer">
+  <div class="footer-columns">
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Customer Reviews</a></li>
+        <li><a href="#">Add Your Restaurant</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Policy Info</h4>
+      <ul>
+        <li><a href="#">Terms & Conditions</a></li>
+        <li><a href="#">Cookies Policy</a></li>
+        <li><a href="#">Cancellation Policy</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Cities</h4>
+      <ul>
+        <li><a href="#">Chennai</a></li>
+        <li><a href="#">Bangalore</a></li>
+        <li><a href="#">Hyderabad</a></li>
+        <li><a href="#">Mumbai</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Help</h4>
+      <ul>
+        <li><a href="#">Booking Status</a></li>
+        <li><a href="#">Add Restaurant</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Restaurant Locations</h4>
+      <ul>
+        <li><a href="#">Restaurant in Chennai</a></li>
+        <li><a href="#">Restaurant in Pune</a></li>
+        <li><a href="#">Restaurant in Bangalore</a></li>
+        <li><a href="#">Restaurant in Kolkata</a></li>
+        <li><a href="#">Restaurant in Hyderabad</a></li>
+        <li><a href="#">Restaurant in Mumbai</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-copyright">
+  <p>© 2025 Book My Table.Co.in. All rights reserved.</p>
+  <p>Phone: (123) 8940-985498 | Email: info@bookmytable.com | Location: Chennai 54375387</p>
+    <div class="social-icons">
+  <a href="#"><img src="face.jpg" alt="Facebook" class="social-icon" /></a>
+  <a href="#"><img src="tw.jpg" alt="Twitter" class="social-icon" /></a>
+  <a href="#"><img src="in.jpg" alt="Instagram" class="social-icon" /></a>
+</div>
+</div>
+</footer>
+</html>

@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Navigation Menu</title>
+  <!-- Google Fonts: Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- External CSS -->
+  <style>
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
+}
+
+/* Navigation styles */
+.navbar {
+  background-color: #B89C65; /* Rich brown */
+  padding: 1rem 0;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: #7a4e2d; /* Slightly lighter brown */
+  border-radius: 4px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .nav-list {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .nav-link {
+    display: block;
+    width: 100%;
+  }
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+.site-footer {
+  background-color: #B89C65;
+  padding: 2rem;
+  color: white;
+}
+
+.footer-columns {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.footer-col {
+  flex: 1 1 180px;
+}
+
+.footer-col h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  color: white;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-col ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 0.95rem;
+}
+
+.footer-col ul li a:hover {
+  color: #c49b5c;
+}
+
+.footer-bottom {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: white;
+}
+
+.social-icons {
+  margin-top: 0.5rem;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin: 0 0.3rem;
+}
+
+.social-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+.footer-copyright {
+  background-color: black; /* Deep brown or custom background */
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem 2rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+}
+
+.footer-copyright p {
+  margin: 0.4rem 0;
+}
+/* 📱 Responsive Media Query */
+@media (max-width: 768px) {
+  .footer-columns {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-col {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  .footer-bottom {
+    font-size: 0.85rem;
+  }
+
+  .social-icons a {
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 0.9rem;
+  }
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fdfdfd;
+}
+
+.booking-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f5f0e6;
+  padding: 1rem 2rem;
+  flex-wrap: wrap;
+}
+
+.left-block h1 {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.left-block .gold {
+  color: #c49b5c;
+  font-weight: 600;
+}
+
+.left-block .black {
+  color: #333;
+  font-weight: 600;
+}
+
+.tagline {
+  font-size: 0.9rem;
+  color: #999;
+  margin-top: 0.2rem;
+}
+
+.center-block {
+  display: flex;
+  gap: 0.5rem;
+  flex: 1;
+  justify-content: center;
+}
+
+.search-input {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 250px;
+}
+
+.search-btn {
+  background-color: #c49b5c;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.right-block {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.icon {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.profile-pic {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .booking-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .center-block {
+    justify-content: flex-start;
+  }
+
+  .search-input {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .right-block {
+    justify-content: flex-start;
+  }
+}
+/* --- Blog Section Styles (image_293c3b.jpg) --- */
+
+.blog-section {
+    /* Use a similar light beige background for consistency */
+    background-color: #f7f3eb; 
+    padding: 60px 20px;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.blog-header-container {
+    /* Slightly lighter background for the header area, as seen in the image */
+    background-color: #fcfbf8; 
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    padding: 30px 20px;
+}
+
+.blog-heading {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.blog-subheading {
+    font-size: 18px;
+    color: #666;
+}
+
+.blog-image-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main-blog-image {
+    width: 100%;
+    height: auto;
+    /* Ensuring the image is displayed correctly */
+    display: block; 
+    object-fit: cover;
+    margin-bottom: 30px;
+}
+
+/* Placeholder for potential blog cards below the main image */
+.blog-post-cards-placeholder {
+    /* If you were to add 3 or 4 blog post cards, you would use a flex/grid layout here */
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    /* Example: */
+    /* background-color: #f0f0f0; 
+    height: 150px; 
+    border-radius: 8px; */
+}
+/* --- Marketing Text Block Styles (image_294778.png) --- */
+
+.marketing-text-section {
+    /* Slightly darker beige background, as seen in the image */
+    background-color: #e8dbc6; 
+    padding: 40px 20px;
+    font-family: sans-serif;
+}
+
+.marketing-text-section .container {
+    max-width: 850px; /* Constrain width for better readability */
+    margin: 0 auto;
+    text-align: center;
+}
+
+.marketing-text-section p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    /* Dark brown/grey color for high contrast against the beige */
+    color: #4b443c; 
+}
+ </style>
+</head>
+<body>
+  <header class="navbar">
+    <nav class="nav-container">
+      <ul class="nav-list">
+        <li><a href="home.html" class="nav-link">Home</a></li>
+        <li><a href="res.html" class="nav-link">Reservation</a></li>
+        <li><a href="blog.html" class="nav-link">Blog</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="cont.html" class="nav-link">Contact Us</a></li>
+        <li><a href="help.html" class="nav-link">Help</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<section class="booking-header">
+  <div class="left-block">
+    <h1><span class="gold">Book</span><span class="black">my table</span></h1>
+    <p class="tagline">Never outstay your meal</p>
+  </div>
+
+  <div class="center-block">
+    <input type="text" placeholder="Search" class="search-input" />
+    <button class="search-btn">Q</button>
+  </div>
+
+  <div class="right-block">
+    <a href="#"><img src="bell.jpg" alt="Notifications" class="icon" /></a>
+    <a href="#"><img src="wish.jpg" alt="Favorites" class="icon" /></a>
+    <a href="#"><img src="con.jpg" alt="Profile" class="profile-pic" /></a>
+    <a href="#"><img src="pf.png" alt="Profile" class="profile-pic" /></a>
+  </div>
+</section>
+
+<section class="blog-section">
+    <div class="blog-header-container">
+        <h2 class="blog-heading">From Our Blog</h2>
+        <p class="blog-subheading">Stay Inspired with Dining Trends Tips & News</p>
+    </div>
+    
+    <div class="blog-image-container">
+        <img src="bban.png" alt="Couple enjoying a meal with wine" class="main-blog-image">
+        
+        <div class="blog-post-cards-placeholder">
+            </div>
+    </div>
+</section>
+
+<section class="marketing-text-section">
+    <div class="container">
+        <p>
+            Discover the most loved spots to impress your partner and reserve your perfect table in seconds. 
+            Tips to enjoy eating out without compromising your health goals. Beat the crowd, avoid disappointment, here's why early 
+            reservations matter more than ever. We've handpicked restaurants with great food and fun vibes for all ages. Explore venues that 
+            offer the best ambiance, special menus, and unforgettable memories.
+        </p>
+    </div>
+</section>
+
+
+  </body>
+  <br>
+    <footer class="site-footer">
+  <div class="footer-columns">
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Customer Reviews</a></li>
+        <li><a href="#">Add Your Restaurant</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Policy Info</h4>
+      <ul>
+        <li><a href="#">Terms & Conditions</a></li>
+        <li><a href="#">Cookies Policy</a></li>
+        <li><a href="#">Cancellation Policy</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Cities</h4>
+      <ul>
+        <li><a href="#">Chennai</a></li>
+        <li><a href="#">Bangalore</a></li>
+        <li><a href="#">Hyderabad</a></li>
+        <li><a href="#">Mumbai</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Help</h4>
+      <ul>
+        <li><a href="#">Booking Status</a></li>
+        <li><a href="#">Add Restaurant</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Restaurant Locations</h4>
+      <ul>
+        <li><a href="#">Restaurant in Chennai</a></li>
+        <li><a href="#">Restaurant in Pune</a></li>
+        <li><a href="#">Restaurant in Bangalore</a></li>
+        <li><a href="#">Restaurant in Kolkata</a></li>
+        <li><a href="#">Restaurant in Hyderabad</a></li>
+        <li><a href="#">Restaurant in Mumbai</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-copyright">
+  <p>© 2025 Book My Table.Co.in. All rights reserved.</p>
+  <p>Phone: (123) 8940-985498 | Email: info@bookmytable.com | Location: Chennai 54375387</p>
+    <div class="social-icons">
+  <a href="#"><img src="face.jpg" alt="Facebook" class="social-icon" /></a>
+  <a href="#"><img src="tw.jpg" alt="Twitter" class="social-icon" /></a>
+  <a href="#"><img src="in.jpg" alt="Instagram" class="social-icon" /></a>
+</div>
+</div>
+</footer>
+</html>

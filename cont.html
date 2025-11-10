@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Navigation Menu</title>
+  <!-- Google Fonts: Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- External CSS -->
+  <style>
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
+}
+
+/* Navigation styles */
+.navbar {
+  background-color: #B89C65; /* Rich brown */
+  padding: 1rem 0;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: #7a4e2d; /* Slightly lighter brown */
+  border-radius: 4px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .nav-list {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .nav-link {
+    display: block;
+    width: 100%;
+  }
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+.site-footer {
+  background-color: #B89C65;
+  padding: 2rem;
+  color: white;
+}
+
+.footer-columns {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.footer-col {
+  flex: 1 1 180px;
+}
+
+.footer-col h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  color: white;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-col ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 0.95rem;
+}
+
+.footer-col ul li a:hover {
+  color: #c49b5c;
+}
+
+.footer-bottom {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: white;
+}
+
+.social-icons {
+  margin-top: 0.5rem;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin: 0 0.3rem;
+}
+
+.social-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+.footer-copyright {
+  background-color: black; /* Deep brown or custom background */
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem 2rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+}
+
+.footer-copyright p {
+  margin: 0.4rem 0;
+}
+/* 📱 Responsive Media Query */
+@media (max-width: 768px) {
+  .footer-columns {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-col {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  .footer-bottom {
+    font-size: 0.85rem;
+  }
+
+  .social-icons a {
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 0.9rem;
+  }
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fdfdfd;
+}
+
+.booking-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f5f0e6;
+  padding: 1rem 2rem;
+  flex-wrap: wrap;
+}
+
+.left-block h1 {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.left-block .gold {
+  color: #c49b5c;
+  font-weight: 600;
+}
+
+.left-block .black {
+  color: #333;
+  font-weight: 600;
+}
+
+.tagline {
+  font-size: 0.9rem;
+  color: #999;
+  margin-top: 0.2rem;
+}
+
+.center-block {
+  display: flex;
+  gap: 0.5rem;
+  flex: 1;
+  justify-content: center;
+}
+
+.search-input {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 250px;
+}
+
+.search-btn {
+  background-color: #c49b5c;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.right-block {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.icon {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.profile-pic {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .booking-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .center-block {
+    justify-content: flex-start;
+  }
+
+  .search-input {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .right-block {
+    justify-content: flex-start;
+  }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ------------------------------------------- */
+/* --- Contact Form Section Styles (image_29c263.png) --- */
+/* ------------------------------------------- */
+
+.contact-form-section {
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-form-wrapper {
+    background-color: #fff;
+    /* Large rounded border radius from the image */
+    border-radius: 20px; 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px 60px; /* More horizontal padding for structure */
+    max-width: 800px; 
+    width: 100%;
+}
+
+.form-title {
+    font-size: 30px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contact-form {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 30px 40px; /* Vertical and horizontal gap between form groups */
+    justify-content: space-between;
+}
+
+/* Base style for form inputs, used for all inputs and the message box */
+.form-group {
+    /* This is key for the two-column layout: 
+        It allows two items to fit on one row with a gap. 
+    */
+    flex: 1 1 calc(50% - 20px); 
+    display: flex;
+    flex-direction: column;
+}
+
+.message-group {
+    /* Message takes full width on its row */
+    flex: 1 1 100%; 
+}
+
+.form-group label {
+    font-size: 16px;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px; /* Slightly smaller padding than before to fit text boxes better */
+    border: 1px solid #ddd;
+    border-radius: 5px; /* Slightly less rounded corners on inputs */
+    font-size: 16px;
+    color: #333;
+    background-color: #fcfbf8;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #b08d57; 
+    outline: none;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Customer Support Styling */
+.customer-support {
+    flex: 1 1 100%; 
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.customer-support h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.helpline-number {
+    font-size: 16px;
+    color: #555;
+    font-weight: 500;
+}
+
+/* Submit Button Styling */
+.submit-button {
+    background-color: #b08d57; 
+    color: white;
+    font-weight: 600;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    /* Position the button on the right side of the layout area */
+    margin-left: auto;
+    display: block;
+}
+
+.submit-button:hover {
+    background-color: #9a784d; 
+}
+
+/* Success Message Styling (for JavaScript functionality) */
+.success-message {
+    display: none; 
+    text-align: center;
+    padding: 30px;
+    background-color: #e9f7ef; 
+    border: 1px solid #c8e6c9; 
+    color: #4caf50; 
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.success-message h2 {
+    color: #4caf50;
+    margin-bottom: 10px;
+}
+
+/* --- Media Queries for Responsiveness --- */
+@media (max-width: 768px) {
+    .contact-form-wrapper {
+        padding: 30px;
+    }
+
+    .contact-form {
+        flex-direction: column; 
+        gap: 20px;
+    }
+    
+    .form-group {
+        flex: 1 1 100%; /* Each form group takes full width on small screens */
+    }
+
+    .submit-button {
+        width: 100%; 
+        margin: 20px auto 0 auto; /* Center button when full width */
+    }
+}
+/*
+ * Base Styling (Applies to All Screen Sizes)
+ */
+.banner-section {
+    /* Set the background image */
+    background-image: url('cban.png');
+    /* Ensure the image covers the entire element */
+    background-size: cover;
+    /* Center the image within the element */
+    background-position: center center;
+    /* Prevent the background image from repeating */
+    background-repeat: no-repeat;
+    /* Minimum height for the banner (desktop/larger screens) */
+    min-height: 400px; 
+    /* Add padding for spacing */
+    padding: 20px 0;
+    /* Optional: Center content if you add text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Optional: Use a fixed height if 'min-height' isn't suitable */
+    /* height: 400px; */
+}
+
+/*
+ * Content Styling (Optional, for when you add text)
+ */
+.banner-content {
+    /* Set a max width for content to prevent stretching */
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    /* Optional: Style for text color/shadow on the image */
+    /* color: white; */
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); */
+}
+
+/*
+ * Media Query for Responsiveness (Mobile/Smaller Screens)
+ */
+@media (max-width: 768px) {
+    .banner-section {
+        /* Reduce the height for smaller screens to save vertical space */
+        min-height: 250px; 
+        /* Adjust padding if necessary */
+        padding: 15px 0;
+    }
+}
+ </style>
+</head>
+<body>
+  <header class="navbar">
+    <nav class="nav-container">
+      <ul class="nav-list">
+        <li><a href="home.html" class="nav-link">Home</a></li>
+        <li><a href="res.html" class="nav-link">Reservation</a></li>
+        <li><a href="blog.html" class="nav-link">Blog</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="cont.html" class="nav-link">Contact Us</a></li>
+        <li><a href="help.html" class="nav-link">Help</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<section class="booking-header">
+  <div class="left-block">
+    <h1><span class="gold">Book</span><span class="black">my table</span></h1>
+    <p class="tagline">Never outstay your meal</p>
+  </div>
+
+  <div class="center-block">
+    <input type="text" placeholder="Search" class="search-input" />
+    <button class="search-btn">Q</button>
+  </div>
+
+  <div class="right-block">
+    <a href="#"><img src="bell.jpg" alt="Notifications" class="icon" /></a>
+    <a href="#"><img src="wish.jpg" alt="Favorites" class="icon" /></a>
+    <a href="#"><img src="con.jpg" alt="Profile" class="profile-pic" /></a>
+    <a href="#"><img src="pf.png" alt="Profile" class="profile-pic" /></a>
+  </div>
+</section>
+
+<section class="contact-form-section">
+    <div class="container">
+        <div class="contact-form-wrapper">
+            <h2 class="form-title">Contact Us 📞</h2>
+
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="" required>
+                </div>
+                <div class="form-group message-group">
+                    <label for="message">Message for Query</label>
+                    <textarea id="message" name="message" rows="5" placeholder="" required></textarea>
+                </div>
+
+                <div class="customer-support">
+                    <h3>Customer Support</h3>
+                    <p class="helpline-number">📞 Helpline Number : +91 98765 43210</p>
+                </div>
+
+                <button type="submit" class="submit-button" id="submitButton">Submit</button>
+            </form>
+
+            <div id="successMessage" class="success-message">
+                </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="banner-section">
+    <div class="banner-content">
+        </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('contactForm');
+    const submitButton = document.getElementById('submitButton');
+    const successMessage = document.getElementById('successMessage');
+
+    form.addEventListener('submit', function(event) {
+        // 1. Stop the default submission/page move
+        event.preventDefault(); 
+        
+        // 2. Hide the form and the submit button
+        form.style.display = 'none';
+        
+        // 3. Display the success message
+        successMessage.innerHTML = '<h2>Submission Successful!</h2><p>Redirecting to the Home Page...</p>';
+        successMessage.style.display = 'block';
+
+        // 4. Set a timer to move to the home page (e.g., after 3 seconds)
+        const REDIRECT_DELAY_MS = 3000; // 3 seconds
+
+        setTimeout(() => {
+            // Replace '/index.html' with the actual path to your home page
+            window.location.href = '/home.html'; 
+            
+        }, REDIRECT_DELAY_MS);
+    });
+});
+</script>
+
+  </body>
+  <br>
+    <footer class="site-footer">
+  <div class="footer-columns">
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Customer Reviews</a></li>
+        <li><a href="#">Add Your Restaurant</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Policy Info</h4>
+      <ul>
+        <li><a href="#">Terms & Conditions</a></li>
+        <li><a href="#">Cookies Policy</a></li>
+        <li><a href="#">Cancellation Policy</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Cities</h4>
+      <ul>
+        <li><a href="#">Chennai</a></li>
+        <li><a href="#">Bangalore</a></li>
+        <li><a href="#">Hyderabad</a></li>
+        <li><a href="#">Mumbai</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Help</h4>
+      <ul>
+        <li><a href="#">Booking Status</a></li>
+        <li><a href="#">Add Restaurant</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Restaurant Locations</h4>
+      <ul>
+        <li><a href="#">Restaurant in Chennai</a></li>
+        <li><a href="#">Restaurant in Pune</a></li>
+        <li><a href="#">Restaurant in Bangalore</a></li>
+        <li><a href="#">Restaurant in Kolkata</a></li>
+        <li><a href="#">Restaurant in Hyderabad</a></li>
+        <li><a href="#">Restaurant in Mumbai</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-copyright">
+  <p>© 2025 Book My Table.Co.in. All rights reserved.</p>
+  <p>Phone: (123) 8940-985498 | Email: info@bookmytable.com | Location: Chennai 54375387</p>
+    <div class="social-icons">
+  <a href="#"><img src="face.jpg" alt="Facebook" class="social-icon" /></a>
+  <a href="#"><img src="tw.jpg" alt="Twitter" class="social-icon" /></a>
+  <a href="#"><img src="in.jpg" alt="Instagram" class="social-icon" /></a>
+</div>
+</div>
+</footer>
+</html>
